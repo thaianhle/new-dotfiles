@@ -1,0 +1,13 @@
+2024/07/07-20:45:39.193 6087d Reusing MANIFEST /home/thaianh/.config/chromium/Default/IndexedDB/https_www.gapowork.vn_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/07-20:45:39.193 6087d Recovering log #7
+2024/07/07-20:45:39.195 6087d Reusing old log /home/thaianh/.config/chromium/Default/IndexedDB/https_www.gapowork.vn_0.indexeddb.leveldb/000007.log 
+2024/07/07-20:45:39.232 60881 Level-0 table #11: started
+2024/07/07-20:45:39.235 60881 Level-0 table #11: 46750 bytes OK
+2024/07/07-20:45:39.240 60881 Delete type=0 #7
+2024/07/07-20:45:39.241 6087d Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at '\x00\x07\x00\x00\x05' @ 2083 : 1
+2024/07/07-20:45:39.241 6087d Compacting 1@0 + 1@1 files
+2024/07/07-20:45:39.244 6087d Generated table #12@0: 725 keys, 22825 bytes
+2024/07/07-20:45:39.244 6087d Compacted 1@0 + 1@1 files => 22825 bytes
+2024/07/07-20:45:39.253 6087d compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/07-20:45:39.254 6087d Delete type=2 #11
+2024/07/07-20:45:39.254 6087d Manual compaction at level-0 from '\x00\x07\x00\x00\x05' @ 2083 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)

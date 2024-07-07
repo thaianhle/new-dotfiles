@@ -1,0 +1,8 @@
+2024/07/07-21:08:52.352 4 Reusing MANIFEST /home/thaianh/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2024/07/07-21:08:52.359 4 Recovering log #37
+2024/07/07-21:08:52.359 4 Level-0 table #40: started
+2024/07/07-21:08:52.363 4 Level-0 table #40: 18629 bytes OK
+2024/07/07-21:08:52.364 4 Recovering log #40
+2024/07/07-21:08:52.364 4 Reusing old log /home/thaianh/.config/chromium/Default/Local Storage/leveldb/000040.log 
+2024/07/07-21:08:52.378 4 Delete type=0 #37
+2024/07/07-21:08:52.378 4 Delete type=2 #41

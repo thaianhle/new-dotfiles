@@ -1,0 +1,18 @@
+2024/07/07-19:40:20.828 6087e Reusing MANIFEST /home/thaianh/.config/chromium/Default/IndexedDB/https_chat.zalo.me_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/07-19:40:20.829 6087e Recovering log #3
+2024/07/07-19:40:20.829 6087e Reusing old log /home/thaianh/.config/chromium/Default/IndexedDB/https_chat.zalo.me_0.indexeddb.leveldb/000003.log 
+2024/07/07-19:46:59.321 6087d Level-0 table #5: started
+2024/07/07-19:46:59.338 6087d Level-0 table #5: 1146319 bytes OK
+2024/07/07-19:46:59.344 6087d Delete type=0 #3
+2024/07/07-20:45:40.702 6087e Level-0 table #7: started
+2024/07/07-20:45:40.715 6087e Level-0 table #7: 893077 bytes OK
+2024/07/07-20:45:40.721 6087e Delete type=0 #4
+2024/07/07-20:45:40.721 6087e Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2024/07/07-20:45:40.721 6087e Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x0a\x04\x02\x01\x18\x00g\x007\x000\x000\x007\x000\x001\x001\x007\x002\x008\x004\x007\x001\x006\x006\x006\x004\x009\x00_\x00l\x00i\x00n\x00k' @ 75048 : 1
+2024/07/07-20:45:40.721 6087e Compacting 1@1 + 1@2 files
+2024/07/07-20:45:40.739 6087e Generated table #8@1: 10245 keys, 572847 bytes
+2024/07/07-20:45:40.739 6087e Compacted 1@1 + 1@2 files => 572847 bytes
+2024/07/07-20:45:40.748 6087e compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/07/07-20:45:40.749 6087e Delete type=2 #7
+2024/07/07-20:45:40.749 6087e Delete type=2 #5
+2024/07/07-20:45:40.749 6087e Manual compaction at level-1 from '\x00\x0a\x04\x02\x01\x18\x00g\x007\x000\x000\x007\x000\x001\x001\x007\x002\x008\x004\x007\x001\x006\x006\x006\x004\x009\x00_\x00l\x00i\x00n\x00k' @ 75048 : 1 .. (end); will stop at (end)
