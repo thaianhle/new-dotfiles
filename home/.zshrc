@@ -11,7 +11,7 @@ export TERMINAL='alacritty'
 export BROWSER='firefox-esr'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-export TERM=xterm
+#export TERM=xterm
 if [ -d "$HOME/.local/bin" ] ;
 then PATH="$HOME/.local/bin:$PATH"
 fi
@@ -73,7 +73,7 @@ function dir_icon {
 }
 PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{yellow}.%F{red})%f%b '
 
-PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{cyan}%~%f%b${vcs_info_msg_0_} %(?.%B%F{yellow}->>.%F{red}->>)%f%b '
+#PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{cyan}%~%f%b${vcs_info_msg_0_} %(?.%B%F{yellow}->>.%F{red}->>)%f%b '
 
 #PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{green}>>.%F{red}>>)%f%b '
 
@@ -138,5 +138,5 @@ alias mem="echo tami | sudo -S ps_mem"
 #$HOME/.local/bin/colorscript -r
 
 # zsh-autocomplete
-#zstyle ':completion:*' completer _expand _complete
+#zstyle ':completion:*' completer _expand _complete _approximate
 

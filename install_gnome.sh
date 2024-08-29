@@ -94,16 +94,16 @@ cp -r config/xfce4 ~/.config
 }
 
 gnome_setting_font() {
-gsettings set org.gnome.desktop.interface font-name 'SF Pro Regular 12'
+gsettings set org.gnome.desktop.interface font-name 'SF Pro Display Medium 12'
     
-gsettings set org.gnome.desktop.interface document-font-name 'SF Pro Regular 12'
+gsettings set org.gnome.desktop.interface document-font-name 'SF Pro Display Medium 12'
 
-gsettings set org.gnome.desktop.interface monospace-font-name 'SF Pro Regular 12'
+gsettings set org.gnome.desktop.interface monospace-font-name 'SF Pro Display Medium 12'
 
 # font scaling factor, better set it to be the same as the GDK_DPI_SCALE
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
 
-gsettings set org.gnome.desktop.wm.preferences titlebar-font 'SF Pro Regular 11'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'SF Pro Display Medium 11'
 }
 
 zsh_plugin() {
