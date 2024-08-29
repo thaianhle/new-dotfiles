@@ -31,6 +31,11 @@ install_gnome() {
         gnome-tweaks \
 	gnome-control-center \
 	gnome-color-manager \
+	gnome-settings-daemon \
+	gnome-panel \
+	upower \
+	power-profiles-daemon \
+	polkitd \
         nautilus \
         network-manager-gnome \
         network-manager-openvpn \
@@ -107,14 +112,14 @@ gsettings set org.gnome.desktop.wm.preferences titlebar-font 'SF Pro Display Med
 }
 
 zsh_plugin() {
-echo "installing zsh-autosuggestions"
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-echo "installing zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-
-echo "installing zsh-fast-syntax-highlighting"
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
+#echo "installing zsh-autosuggestions"
+#git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+#
+#echo "installing zsh-syntax-highlighting"
+#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+#
+#echo "installing zsh-fast-syntax-highlighting"
+#git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
 
 echo "installing zsh-autocomplete"
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
