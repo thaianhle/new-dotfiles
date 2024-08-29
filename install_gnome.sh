@@ -5,6 +5,17 @@ install() {
     echo "installing gnome desktop"
     sudo apt update -y
     sudo apt install -y \
+        zsh \
+        zsh-autosuggestions \
+        zsh-syntax-highlighting \
+        emacs \
+        meson \
+        ninja-build \
+        cmake \
+        cmake-data \
+        pkg-config \
+        fzf \
+        alacritty \
         eog \
         evince \
         gnome-calculator \
