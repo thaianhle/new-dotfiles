@@ -1,15 +1,17 @@
 #--
 #--
-#export BAT_THEME="Dracula"
+export BAT_THEME="Dracula"
+export GDK_DPI_SCALE=1.2
 #--
 export FZF_BASE="/usr/bin/fzf"
 export ZSH="$HOME/.oh-my-zsh"
-export VISUAL='nvim'
-export EDITOR='geany'
+export VISUAL='emacs'
+export EDITOR='emacs -nw'
 export TERMINAL='alacritty'
 export BROWSER='firefox-esr'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
-
+export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+export TERM=xterm
 if [ -d "$HOME/.local/bin" ] ;
 then PATH="$HOME/.local/bin:$PATH"
 fi
@@ -64,21 +66,28 @@ setopt noflowcontrol
 #prompt
 function dir_icon {
     if [[ "$PWD" == "$HOME" ]]; then
-        echo "%B%F{black}%f%b"
+        echo "%B%F{yellow}%f%b"
     else
         echo "%B%F{cyan}%f%b"
     fi
 }
-PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{green}.%F{red})%f%b '
+PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{yellow}.%F{red})%f%b '
+
+PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{cyan}%~%f%b${vcs_info_msg_0_} %(?.%B%F{yellow}->>.%F{red}->>)%f%b '
+
+#PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_info_msg_0_} %(?.%B%F{green}>>.%F{red}>>)%f%b '
 
 #plugin
-#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_CUSTOM/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source $ZSH_CUSTOM/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+#source $ZSH
 #source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 #bindkey '^A' history-substring-search-up
 #bindkey '^B' history-substring-search-down
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
+#plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
 #terminal title
 function xterm_title_precmd () {
@@ -96,8 +105,10 @@ if [[ "$TERM" == (kitty*|alacritty*|termite*|gnome*|konsole*|kterm*|putty*|rxvt*
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-plugins=(git fzf cp sudo colored-man-pages command-not-found dirhistory)
+#plugins=(git fzf cp sudo colored-man-pages command-not-found dirhistory zsh-autosuggestions fast-syntax-highlighting zsh-syntax-highlighting)
 
+plugins=(git fzf cp sudo colored-man-pages command-not-found dirhistory)
+#source $ZSH_CUSTOM
 source $ZSH/oh-my-zsh.sh
 
 ##alias
@@ -124,4 +135,8 @@ alias hdd="echo tami | sudo -S $HOME/.scripts/HDSentinel"
 alias mem="echo tami | sudo -S ps_mem"
 
 #autostart
-$HOME/.local/bin/colorscript -r
+#$HOME/.local/bin/colorscript -r
+
+# zsh-autocomplete
+#zstyle ':completion:*' completer _expand _complete
+

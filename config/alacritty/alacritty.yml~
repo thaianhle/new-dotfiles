@@ -44,8 +44,8 @@ cursor:
   unfocused_hollow: false 
   blink_interval: 550
 # def Shell
-#shell:
-#  program: /usr/bin/zsh
+shell:
+  program: /usr/bin/zsh
 
 # Mouse config
 mouse:
