@@ -1,0 +1,77 @@
+[37m[[0m[32mINF[0m[37m][0m [90m15:21:16.194[0m [36mpython-black.commands[0m[93;1m:33[0m[96m - [0mversions: black=23.7.0, pathspec=0.11.0, platformdirs=3.0.0, tomli=2.0.1, appdirs=1.4.4
+[37m[[0m[32mINF[0m[37m][0m [90m15:21:18.672[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:21:18.675[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:21:18.676[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:21:57.475[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:09.558[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:12.161[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:12.162[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:12.162[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:26.265[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:29.591[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:29.591[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:29.591[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:51.858[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:53.696[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:53.697[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:53.697[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:54.771[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:54.772[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:54.772[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:57.044[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:57.045[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:22:57.045[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:06.069[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:06.071[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:06.071[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:07.999[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:08.000[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:08.000[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:28.529[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:31.017[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:34.987[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:34.988[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:34.989[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:36.078[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:36.079[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:36.079[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:37.553[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:37.553[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:37.553[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:38.661[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:38.662[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:38.663[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:48.340[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:23:55.764[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:02.774[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:12.676[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:12.678[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:12.678[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:27.250[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:27.251[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:27.252[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:45.491[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:54.833[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:54.835[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:54.835[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:24:58.765[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:02.973[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:12.794[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:18.266[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:27.563[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:34.758[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:38.645[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:43.041[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:25:47.338[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:26:05.286[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:30:12.591[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:30:23.497[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:31:48.941[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:32:00.008[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:32:00.009[0m [36mpython-black.python_black.black[0m[93;1m:223[0m[96m - [0mconfiguration file used: None
+[37m[[0m[32mINF[0m[37m][0m [90m15:32:00.009[0m [36mpython-black.python_black.black[0m[93;1m:197[0m[96m - [0mconfiguration used: {'target_version': [], 'line_length': 88, 'is_pyi': False, 'skip_source_first_line': False, 'skip_string_normalization': False, 'skip_magic_trailing_comma': False, 'include': '(\\.pyi?|\\.ipynb)$'}
+[37m[[0m[32mINF[0m[37m][0m [90m15:32:10.573[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:32:13.794[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:32:46.288[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:34:06.393[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False
+[37m[[0m[32mINF[0m[37m][0m [90m15:34:40.003[0m [36mpython-black.commands[0m[93;1m:56[0m[96m - [0muse smart mode: False

@@ -1,0 +1,33 @@
+{
+    "clients": {
+        "pylsp": {
+            "enabled": false,  // we will enable PyLSP at the project level
+            "selector": "source.python",
+            //"settings": {
+            //    "pylsp.plugins.pyflakes.enabled": false, // enabled by default, use flake8
+            //    "pylsp.plugins.pycodestyle.enabled": false, // enabled by default, use flake8
+            //    "pylsp.plugins.flake8.enabled": true,  // flake8 is included in pyls
+            //    "pylsp.configurationSources": [
+            //      "flake8",   // discover flake8 config in ~/.config/flake8, setup.cfg, tox.ini and flake8.cfg
+            //    ],
+            //    "pylsp.plugins.jedi_rename.enabled": true,  // included in pyls
+            //    // File formatter, invoke via LSP: Format file
+            //    "pylsp.plugins.autopep8.enabled": false,  // enabled by default, use black
+            //    "pylsp.plugins.yapf.enabled": false,  // enabled by default, use black
+            //    "pylsp.plugins.black.enabled": true,  // from python-lsp-black
+            //    "pylsp.plugins.mypy_ls.enabled": true,  // from mypy-ls
+            //}
+            "settings": {
+                "pylsp.plugins.pyflakes.enabled": false, 
+                "pylsp.plugins.pycodestyle.enabled": false, 
+                "pylsp.plugins.flake8.enabled": true, 
+                "pylsp.configurationSources": ["flake8"],
+                "pylsp.plugins.jedi_rename.enabled": true,
+                "pylsp.plugins.autopep8.enabled": false,  
+                "pylsp.plugins.yapf.enabled": false,  
+                "pylsp.plugins.black.enabled": true, 
+                "pylsp.plugins.mypy_ls.enabled": true
+            }
+        },
+    },
+}

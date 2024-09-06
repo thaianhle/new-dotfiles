@@ -1,0 +1,23 @@
+{
+	"default_config": {
+		"linux": "zsh-shell",
+		"windows": "git-bash"
+	},
+
+	"shell_configs": [
+		{
+			"name": "zsh-shell",
+			"cmd": ["zsh"],
+			"env": {},
+			"enable": true,
+			"platforms": ["linux", "osx"]
+		},
+		{
+			"name": "git-bash",
+			"cmd": ["source", "new_venv/bin/activate"],
+			"env": {},
+			"enable": true,
+			"platforms": ["windows"]
+		}
+	]
+}
