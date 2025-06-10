@@ -80,7 +80,7 @@ PS1='%B%F{blue}%f%b  %B%F{magenta}%n%f%b $(dir_icon)  %B%F{red}%~%f%b${vcs_in
 #plugin
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH_CUSTOM/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source $ZSH_CUSTOM/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 #source $ZSH_CUSTOM/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 #source $ZSH
 #source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -130,7 +130,7 @@ alias ls='exa -a --color always --icons --group-directories-first'
 alias ll='exa -a -l -b --color always --icons --group-directories-first'
 #alias ls='lsd -a --group-directories-first'
 #alias ll='lsd -la --group-directories-first'
-alias cat="batcat"
+#alias cat="batcat"
 alias hdd="echo tami | sudo -S $HOME/.scripts/HDSentinel"
 alias mem="echo tami | sudo -S ps_mem"
 
@@ -140,3 +140,10 @@ alias mem="echo tami | sudo -S ps_mem"
 # zsh-autocomplete
 #zstyle ':completion:*' completer _expand _complete _approximate
 
+alias k="kubectl"
+alias knode="${k} get nodes"
+alias kpod="${k} get pods"
+export KUBECONFIG=$HOME/go_project/ansible/plays/kubeconfig_RKE_CLUSTER.yaml
+export GOPATH=$HOME/.go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
