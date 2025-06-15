@@ -147,3 +147,8 @@ export KUBECONFIG=$HOME/go_project/ansible/plays/kubeconfig_RKE_CLUSTER.yaml
 export GOPATH=$HOME/.go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+export AWS_REGION="ap-south-1"
+export GDK_BACKEND=wayland,x11
+export QT_QPA_PLATFORM=wayland,xcb
+export MOZ_ENABLE_WAYLAND=1
