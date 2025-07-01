@@ -4,3 +4,4 @@ new_venv/
 ./dmypy.json
 **/*~
 **/#*#
+aws_proxy.log

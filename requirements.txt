@@ -1,8 +1,0 @@
-mypy
-pyls-isort
-pylsp-mypy
-python-lsp-black
-python-lsp-ruff
-python-lsp-server[all]
-cython
-distro
