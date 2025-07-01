@@ -2,127 +2,81 @@
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
-install_gnome() {
-    echo "installing gnome desktop"
-    sudo apt-get update -y
-    sudo apt-get install -y \
-        zsh \
-        zsh-autosuggestions \
-        zsh-syntax-highlighting \
-        emacs \
-        meson \
-        ninja-build \
-        cmake \
-        cmake-data \
-        pkg-config \
-        fzf \
-        alacritty \
-	exa \
-        eog \
-        evince \
-        gnome-calculator \
-        gnome-disk-utility \
-        gnome-screenshot \
-        gnome-session \
-	gnome-tweaks \
-        gnome-shell-extensions \
-        gnome-system-monitor \
-        gnome-terminal \
-        gnome-tweaks \
-	gnome-control-center \
-	gnome-color-manager \
-	gnome-settings-daemon \
-	gnome-panel \
-	upower \
-	power-profiles-daemon \
-	polkitd \
-        nautilus \
-        network-manager-gnome \
-        network-manager-openvpn \
-        network-manager-openvpn-gnome \
-        wl-clipboard \
-        xsel
+setup_base() {
+    sudo dnf install epel-release -y
+    sudo dnf install unzip htop emacs -y
+    sudo dnf groupinstall "Development Tools" -y
+    sudo dnf install python3-dev
 }
 
-install_kali() {
-    echo "installing gnome desktop"
-    install_gnome
+setup_aws() {
+    echo "installing aws cli"
+    sudo dnf install upzip -y
 
-    echo "start copying config"
-    copy_config
-    
-    echo "gnome setting fonts"
-    gnome_setting_font
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
+    echo "done setup aws cli"
 }
 
-install_default() {
-    echo "installing gnome desktop"
-    install_gnome
-    
-    echo "installing oh-my-zsh and plugins"
-    install_oh_my_zsh
-
-    echo "start copying config"
-    copy_config
-    copy_zshrc
-
-    echo "installing zsh plugin"
-    zsh_plugin
-
-    echo "change default shell"
-    sudo chsh -s $(which zsh) $USER
-
-    echo "gnome setting fonts"
-    gnome_setting_font
+setup_docker() {
+    echo "installing docker"
+    sudo dnf -y install dnf-plugins-core
+    sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    sudo dnf check-update -y
+    sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    newgrp docker
+    sudo systemctl restart docker.service
+    echo "done setup docker"
 }
 
-
-install_oh_my_zsh() {
-echo "installing oh-my-zsh"
-NO_INTERACTIVE=true sh -c "$(curl -fsSL https://raw.githubusercontent.com/subtlepseudonym/oh-my-zsh/feature/install-noninteractive/tools/install.sh)"
+setup_tailscale() {
+    echo "installing tailscale private tunnel"
+    curl -fsSL https://tailscale.com/install.sh | sh
 }
 
-copy_zshrc() {
-cp -r home/.zshrc ~/
+setup_zsh() {
+    echo "cleanup and reinstall clean oh-my-zsh"
+    rm -rf $HOME/.oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+    echo "copy .zshrc"
+    cp ~/new-dotfiles/home/.zshrc ~/.zshrc
+
+    echo "change shell $USER to zsh"
+    usermod -s thaianh $USER
+
+    echo "installing zsh-autosuggestions"
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+    echo "installing zsh-syntax-highlighting"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+    echo "installing zsh-fast-syntax-highlighting"
+    git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
+
+    echo "installing zsh-autocomplete"
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 }
 
-copy_config() {
-echo "copying config for .fonts, .zshrc, .icons into home folder"
-cp -r home/.fonts ~/
-cp -r home/.icons ~/
-
-echo "copy config alacritty, fontconfig, lxterminal, xfce4terminal into config folder"
-cp -r config/alacritty ~/.config
-cp -r config/fontconfig ~/.config
-cp -r config/lxterminal ~/.config
-cp -r config/xfce4 ~/.config
+setup_windsurf() {
+    echo "copy windsurf extension"
+    cp -r ~/new-dotfiles/.windsurf $HOME/
 }
 
-gnome_setting_font() {
-gsettings set org.gnome.desktop.interface font-name 'SF Pro Display Medium 12'
-    
-gsettings set org.gnome.desktop.interface document-font-name 'SF Pro Display Medium 12'
-
-gsettings set org.gnome.desktop.interface monospace-font-name 'SF Pro Display Medium 12'
-
-# font scaling factor, better set it to be the same as the GDK_DPI_SCALE
-gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
-
-gsettings set org.gnome.desktop.wm.preferences titlebar-font 'SF Pro Display Medium 11'
+setup_k8s() {
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    chmod +x kubectl
+    sudo mv kubectl /usr/local/bin/kubectl
 }
-
-zsh_plugin() {
-#echo "installing zsh-autosuggestions"
-#git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-#
-#echo "installing zsh-syntax-highlighting"
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-#
-#echo "installing zsh-fast-syntax-highlighting"
-#git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
-
-echo "installing zsh-autocomplete"
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+setup() {
+    setup_base
+    setup_aws
+    setup_docker
+    setup_k8s
+    setup_windsurf
 }
 
 $@

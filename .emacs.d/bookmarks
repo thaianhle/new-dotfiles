@@ -1,0 +1,17 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("kubectl"
+ (filename . "~/")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26695 38173 432276 449000))
+("hello.yaml"
+ (filename . "~/hello.yaml")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26695 38064 7999 843000))
+)

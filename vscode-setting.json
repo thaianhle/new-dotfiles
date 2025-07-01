@@ -1,0 +1,92 @@
+{
+  // 🧠 General
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.cursorSmoothCaretAnimation": false,
+  "editor.smoothScrolling": false,
+
+  // 📁 Watcher (giảm CPU, I/O)
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/.hg/**": true,
+    "**/.svn/**": true,
+    "**/node_modules/**": true,
+    "**/bower_components/**": true,
+    "**/__pycache__/**": true,
+    "**/.mypy_cache/**": true,
+    "**/.pytest_cache/**": true,
+    "**/.venv/**": true,
+    "**/venv/**": true,
+    "**/vendor/**": true,
+    "**/bin/**": true,
+    "**/obj/**": true,
+    "**/.terraform/**": true,
+    "**/.terragrunt-cache/**": true,
+    "**/.ansible/**": true,
+    "**/.cache/**": true,
+    "**/*.log": true
+  },
+
+  // 🔍 Tìm kiếm cũng exclude để nhẹ hơn
+  "search.exclude": {
+    "**/node_modules/**": true,
+    "**/vendor/**": true,
+    "**/__pycache__/**": true,
+    "**/.venv/**": true,
+    "**/.terraform/**": true,
+    "**/.ansible/**": true
+  },
+
+  // 🐍 Python (Pyright nhẹ hơn MS Python)
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.autoImportCompletions": false,
+  "python.terminal.activateEnvironment": false,
+  "pyright.openFilesOnly": true,
+
+  // 🧑‍💻 Go
+  "go.useLanguageServer": true,
+  "go.toolsManagement.autoUpdate": false,
+  "gopls": {
+    "build.directoryFilters": ["-node_modules", "-vendor", "-.ansible", "-.cache"],
+    "ui.completion.usePlaceholders": false,
+    "analyses": {
+      "unusedparams": true,
+      "shadow": false
+    },
+    "staticcheck": false
+  },
+
+  // ☸️ Kubernetes
+  "yaml.schemas": {
+    "kubernetes": "/*.yaml"
+  },
+  "yaml.validate": true,
+  "yaml.format.enable": false,
+
+  // ⚙️ Ansible
+  "ansible.python.interpreterPath": "/usr/bin/python3",
+  "ansible.validation.enabled": false,
+  "ansible.useFullyQualifiedCollectionNames": false,
+
+  // 🌍 Terraform
+  "terraform.languageServer.enable": true,
+  "terraform.languageServer.settings": {
+    "experimentalFeatures": {
+      "validateOnSave": false
+    }
+  },
+
+  // 🐚 Shell
+  "[shellscript]": {
+    "editor.formatOnSave": false
+  },
+
+  // 🧠 Extensions runtime (nên disable nếu không dùng)
+  "extensions.ignoreRecommendations": true,
+  "update.mode": "manual",
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false
+}

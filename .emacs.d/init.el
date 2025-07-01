@@ -9,7 +9,10 @@
 
 ;; global display line numbers
 (global-display-line-numbers-mode t)
-(setq-default tab-width 4)
+;;(setq indent-tabs-mode nil)
+;;(setq indent-line-function 'insert-tab)
+;;(setq-default tab-width 4)
+(setq tab-stop-list (number-sequence 4 200 4))
 
 (require 'package)
 (setq package-archives
@@ -56,8 +59,8 @@
 		(select-window win)
 		(vterm buf-name))))
   (when (get-buffer-window "*vterm*")
-	(let ((window (get-buffer-window "*vterm")))	
-  (window-resize window (- 80 (window-width window)) t))))
+	(let ((window (get-buffer-window "*vterm")))
+      (window-resize window (- 80 (window-width window)) t))))
 
 ;; clipboard system
 ;;(setq x-select-enable-clipboard t)
@@ -110,6 +113,3 @@
 (my/setup-clipboard)
 ;; vterm mode key binding as real shell
 ;; Cấu hình vterm để truyền phím như terminal thật
-
-
-
