@@ -100,7 +100,7 @@ tailscale status
 ---
 
 ## 🔄 RUN ON SERVER AFTER SSH
-# only use to setup_server all package needed
+- **only use** for setuping server all package needed
 ```bash
 ./install.sh setup_server
 ```
