@@ -104,12 +104,10 @@ tailscale status
 Nếu bạn cần cài lại server thủ công:
 
 ```bash
-gcloud compute ssh $USER@centos-vm --zone=asia-southeast1-b
 cd ~/new-dotfiles
-chmod +x install.sh
-./install.sh setup_server
+chmod +x bootstrap.sh
+
+# only use to setup_server all package needed
+./bootstrap.sh setup_server
 ```
-
 ---
-
-✍️ *Built for DevOps – bảo mật, đơn giản, không port public.*
