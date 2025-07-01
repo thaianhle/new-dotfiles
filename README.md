@@ -79,7 +79,7 @@ tailscale status
 |--------|------|
 | `boot_instance.sh` | Dùng `gcloud compute` để tạo VM CentOS 8 |
 | `aws_proxy.py` | Flask server giả lập `credential_process` để cung cấp AWS session credentials |
-| `bootstrap.sh` | Tự động hóa cả local và remote setup |
+| `install.sh` | Tự động hóa cả local và remote setup |
 | `.aws/config` | AWS profile trỏ về Tailscale IP, ví dụ: `http://100.x.y.z:8080/aws-credentials` |
 
 ---
@@ -87,9 +87,9 @@ tailscale status
 ## ⚠️ Lưu ý bảo mật
 
 - **SSH Key**: Không commit file `~/.ssh/gcp_key` vào Git. Set `chmod 600`.
-- **Tailscale IP**: Nếu thay đổi, cần chạy lại:  
+- **Tailscale IP**: Nếu thay đổi, cần chạy lại:
   ```bash
-  ./bootstrap.sh local_setup
+  ./install.sh local_setup
   ```
 - **Proxy port 8080**: Đảm bảo mở trên laptop nếu dùng từ xa.
 - **Spot VM**: Có thể bị GCP xóa bất kỳ lúc nào. Kiểm tra bằng:
@@ -99,15 +99,8 @@ tailscale status
 
 ---
 
-## 🔄 Tái chạy hoặc sửa cấu hình
-
-Nếu bạn cần cài lại server thủ công:
-
-```bash
-cd ~/new-dotfiles
-chmod +x bootstrap.sh
-
+## 🔄 RUN ON SERVER AFTER SSH
 # only use to setup_server all package needed
-./bootstrap.sh setup_server
+./install.sh setup_server
 ```
 ---

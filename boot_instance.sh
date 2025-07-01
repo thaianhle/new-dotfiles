@@ -19,6 +19,6 @@ gcloud compute instances create $INSTANCE_NAME \
   --provisioning-model=SPOT \
   --instance-termination-action=DELETE \
   --description="Spot VM for development with auto-delete boot disk" \
-  --no-auto-delete-boot-disk 
+  --no-boot-disk-auto-delete
 
 echo "Instance $INSTANCE_NAME created successfully!"

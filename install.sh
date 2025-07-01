@@ -81,42 +81,42 @@ setup_server() {
     setup_k8s
 }
 
+
 # Local laptop setup: Generate SSH key, update metadata, create instance, update .aws/config, rsync, and setup server
 local_setup() {
     echo "Running local setup..."
 
+    ./boot_instance.sh
     # Step 1: Generate SSH key if it doesn't exist
     SSH_KEY_PATH="$HOME/.ssh/gcp_key"
     if [ ! -f "$SSH_KEY_PATH" ]; then
         echo "Generating SSH key at $SSH_KEY_PATH"
-        ssh-keygen -t rsa -f "$SSH_KEY_PATH" -C "$USER" -N ""
-        chmod 600 "$SSH_KEY_PATH"
+        ssh-keygen -t rsa -f "$SSH_KEY_PATH"
+        chmod 400 "$SSH_KEY_PATH"
     else
         echo "SSH key already exists at $SSH_KEY_PATH"
     fi
 
+    TMP_SSH_KEY="$SSH_KEY_PATH.prefixed.pub"
+    echo "$USER:$(cat "$SSH_KEY_PATH.pub")" > "$TMP_SSH_KEY"
     # Step 2: Add SSH public key to GCP project metadata
     echo "Adding SSH public key to GCP project metadata"
-    gcloud compute project-info add-metadata --metadata-from-file ssh-keys="$SSH_KEY_PATH.pub"
+    gcloud compute instances add-metadata $INSTANCE_NAME --zone $ZONE --metadata-from-file ssh-keys="$TMP_SSH_KEY"
+    rm -rf $TMP_SSH_KEY
 
-    # Step 3: Create GCP instance
-    echo "Creating GCP instance with boot_instance.sh"
-    chmod +x boot_instance.sh
-    ./boot_instance.sh
-
-    # Step 4: Wait for instance to be ready and get external IP
+    # Step 3: Wait for instance to be ready and get external IP
     echo "Waiting for instance to be ready..."
     sleep 30 # Wait for instance to start
-    VM_EXTERNAL_IP=$(gcloud compute instances list --zones $ZONE --filter="name=$INSTANCE_NAME" | grep "$INSTANCE_NAME" | awk '{print $5}')
+    VM_EXTERNAL_IP=$(gcloud compute instances list --zones $ZONE | grep $INSTANCE_NAME | awk '{print $6}')
     if [ -z "$VM_EXTERNAL_IP" ]; then
         echo "Error: Could not retrieve VM external IP. Check if instance was created successfully."
         exit 1
     fi
     echo "VM External IP: $VM_EXTERNAL_IP"
 
-    # Step 5: Ensure Tailscale is up
+    # Step 4: Ensure Tailscale is up
     echo "Starting Tailscale on local laptop"
-    tailscale up
+    sudo tailscale up
     # Get Tailscale IP
     TAILSCALE_IP=$(tailscale ip -4)
     if [ -z "$TAILSCALE_IP" ]; then
@@ -125,22 +125,16 @@ local_setup() {
     fi
     echo "Tailscale IP: $TAILSCALE_IP"
 
-    # Step 6: Update .aws/config with Tailscale IP
-    sed -i "s|http://localhost:8080|http://$TAILSCALE_IP:8080|" ./new-dotfiles/.aws/config
+    # Step 5: Update .aws/config with Tailscale IP
+    sed -i "s|http://localhost:8080|http://$TAILSCALE_IP:8080|g" ~/new-dotfiles/.aws/config
+
     echo "Updated .aws/config with Tailscale IP: $TAILSCALE_IP"
 
-    # Step 7: Rsync to server
+    # Step 6: Rsync to server
     echo "Syncing new-dotfiles to server $VM_EXTERNAL_IP"
     rsync -azP -e "ssh -i $SSH_KEY_PATH" ./new-dotfiles $USER@$VM_EXTERNAL_IP:~/new-dotfiles
 
-    # Step 8: SSH and run setup on server
-    echo "Running setup on server"
-    ssh -i "$SSH_KEY_PATH" $USER@$VM_EXTERNAL_IP << 'EOF'
-        cd ~/new-dotfiles
-        chmod +x install.sh
-        ./install.sh setup_server
-EOF
-    
+    # Step 7: SSH and run setup on server
     echo "Boostrap aws_proxy"
     rm -rf aws_proxy.log
     pid=ps aux | grep aws_proxy.py | grep -v grep | awk '{print $2}'
@@ -155,6 +149,9 @@ EOF
 
     echo "check curl http://localhost:8080/aws-credentials"
     curl http://localhost:8080/$TAILSCALE_IP:8080/aws-credentials
+
+    echo "please ssh into server and run: >>>"
+    echo "cd new-dotfiles && ./install.sh setup_server"
 }
 
 # Execute function based on argument
